@@ -2,13 +2,15 @@ name: Docker Image CI/CD
 
 on:
   push:
-    branches: [ "main" ]
+    branches:
+      - develop
+      - main
   pull_request:
-    branches: master
+    branches: main
   workflow_dispatch:
 
 jobs:
-  test:
+  push_to_registry:
     runs-on: ubuntu-latest
 
     steps:

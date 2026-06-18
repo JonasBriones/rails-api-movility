@@ -7,10 +7,10 @@ on:
         - 'feature/**'
   pull_request:
     branches:
-        - main
+        - develop
 
 jobs:
-  test:
+  test_and_lint:
     name: Run RSpec and Linters
     runs-on: ubuntu-latest
     env:
